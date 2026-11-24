@@ -12,7 +12,7 @@ public class Product {
     private String barCode;
     private BigDecimal costPrice;
     private BigDecimal sellPrice;
-    private String measurementUnit;
+    private Integer weight;
 
     public Product(Builder builder) {
         this.SKU = builder.SKU;
@@ -23,7 +23,7 @@ public class Product {
         this.barCode = builder.barCode;
         this.costPrice = builder.costPrice;
         this.sellPrice = builder.sellPrice;
-        this.measurementUnit = builder.measurementUnit;
+        this.weight = builder.weight;
     }
 
     public String getSKU() {
@@ -90,12 +90,12 @@ public class Product {
         this.sellPrice = sellPrice;
     }
 
-    public String getMeasurementUnit() {
-        return measurementUnit;
+    public Integer getWeight() {
+        return weight;
     }
 
-    public void setMeasurementUnit(String measurementUnit) {
-        this.measurementUnit = measurementUnit;
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
 
     public static class Builder {
@@ -107,7 +107,7 @@ public class Product {
         private String barCode;
         private BigDecimal costPrice;
         private BigDecimal sellPrice;
-        private String measurementUnit;
+        private Integer weight;
 
         public Builder() {
         }
@@ -152,8 +152,8 @@ public class Product {
             return this;
         }
 
-        public Builder measurementUnit(String measurementUnit) {
-            this.measurementUnit = measurementUnit;
+        public Builder measurementUnit(Integer measurementUnit) {
+            this.weight = measurementUnit;
             return this;
         }
 

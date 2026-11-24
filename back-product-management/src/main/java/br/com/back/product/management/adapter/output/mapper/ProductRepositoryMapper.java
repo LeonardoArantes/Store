@@ -17,7 +17,7 @@ public class ProductRepositoryMapper {
                 product.getBarCode(),
                 product.getCostPrice(),
                 product.getSellPrice(),
-                product.getMeasurementUnit()
+                product.getWeight()
         );
     }
 

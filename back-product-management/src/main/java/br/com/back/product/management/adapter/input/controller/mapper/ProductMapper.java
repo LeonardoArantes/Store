@@ -17,7 +17,7 @@ public class ProductMapper {
                 .barCode(productRequest.barCode())
                 .costPrice(productRequest.costPrice())
                 .sellPrice(productRequest.sellPrice())
-                .measurementUnit(productRequest.measurementUnit())
+                .measurementUnit(productRequest.wheight())
                 .build();
 
     }

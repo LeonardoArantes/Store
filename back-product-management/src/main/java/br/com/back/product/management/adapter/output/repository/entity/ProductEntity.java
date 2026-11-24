@@ -39,13 +39,13 @@ public class ProductEntity {
     BigDecimal sellPrice;
 
     @Column(name = "measurement_unit", nullable = false, length = 20)
-    String measurementUnit;
+    Integer weight;
 
 
     public ProductEntity() {
     }
 
-    public ProductEntity(String sku, String nome, String description, String category, String brand, String barCode, BigDecimal costPrice, BigDecimal sellPrice, String measurementUnit) {
+    public ProductEntity(String sku, String nome, String description, String category, String brand, String barCode, BigDecimal costPrice, BigDecimal sellPrice, Integer weight) {
         this.sku = sku;
         this.nome = nome;
         this.description = description;
@@ -54,7 +54,7 @@ public class ProductEntity {
         this.barCode = barCode;
         this.costPrice = costPrice;
         this.sellPrice = sellPrice;
-        this.measurementUnit = measurementUnit;
+        this.weight = weight;
     }
 
     public Long getId() {
@@ -129,11 +129,11 @@ public class ProductEntity {
         this.sellPrice = sellPrice;
     }
 
-    public String getMeasurementUnit() {
-        return measurementUnit;
+    public Integer getWeight() {
+        return weight;
     }
 
-    public void setMeasurementUnit(String measurementUnit) {
-        this.measurementUnit = measurementUnit;
+    public void setWeight(Integer weight) {
+        this.weight = weight;
     }
 }

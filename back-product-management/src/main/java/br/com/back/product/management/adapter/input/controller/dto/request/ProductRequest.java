@@ -11,6 +11,6 @@ public record ProductRequest(
         String barCode,
         BigDecimal costPrice,
         BigDecimal sellPrice,
-        String measurementUnit
+        Integer wheight
 ) {
 }
