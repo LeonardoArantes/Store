@@ -1,0 +1,50 @@
+# Product Management — TODO
+
+## 1. Exception Handling and Validation
+
+- [ ] Implement `GlobalExceptionHandler` using `@RestControllerAdvice`.
+- [ ] Create custom exceptions.
+- [ ] Implement request validations using Jakarta Bean Validation (`@Valid`, `@NotBlank`, `@NotNull`, `@Positive`, etc.).
+- [ ] Validate required fields.
+- [ ] Validate prices (cost and selling price).
+- [ ] Handle duplicate SKU exceptions.
+- [ ] Standardize API error responses.
+
+## 2. Automated Tests
+
+- [ ] Create Use Case unit tests.
+- [ ] Create Controller tests.
+- [ ] Create Repository tests.
+- [ ] Create PostgreSQL integration tests.
+
+## 3. Product Operations
+
+- [ ] Implement product update.
+- [ ] Implement product deactivation (soft delete).
+- [ ] Implement product search by ID.
+- [ ] Implement product search by SKU.
+- [ ] Implement product listing.
+
+## 4. Database Management
+
+- [ ] Add Flyway.
+- [ ] Create the initial database migration.
+- [ ] Version future database changes.
+
+## 5. Documentation and Configuration
+
+- [ ] Create `.env.example`.
+- [ ] Implement Swagger/OpenAPI.
+- [ ] Document environment setup.
+- [ ] Document API endpoints.
+
+## 6. Infrastructure and Security
+
+- [ ] Add Docker support.
+- [ ] Create Docker Compose configuration.
+- [ ] Implement authentication.
+- [ ] Implement authorization.
+
+---
+
+**Note:** Physical product deletion is not planned. Product records must be preserved for historical purposes.
