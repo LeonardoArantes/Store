@@ -12,5 +12,5 @@ public record ProductRequest(
         BigDecimal costPrice,
         BigDecimal sellPrice,
         String measurementUnit
-)
-{ }
+) {
+}

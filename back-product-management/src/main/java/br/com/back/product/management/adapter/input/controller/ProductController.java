@@ -28,7 +28,7 @@ public class ProductController {
 
     @PostMapping
     @RequestMapping("/create")
-    public ResponseEntity<ProductResponse> createProduct(@RequestBody ProductRequest request){
+    public ResponseEntity<ProductResponse> createProduct(@RequestBody ProductRequest request) {
         logger.info("Received request to create product");
         productManagementInputPort.createProduct(productMapper.toDomain(request));
         ProductResponse response = new ProductResponse("0001", "Product Created");

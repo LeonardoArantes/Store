@@ -21,11 +21,11 @@ public class ProductAdapter implements ProductRepositoryOutputPort {
 
     @Override
     public void save(Product product) {
-        try{
+        try {
             logger.info(String.format("Saving product on DB{}", product.getNome()));
             var entity = mapper.toEntity(product);
             productRepository.save(entity);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -12,7 +12,7 @@ public class LoggerAdapter implements LoggerOutputPort {
             LoggerFactory.getLogger(LoggerAdapter.class);
 
     @Override
-    public void info(String message,  Object... args) {
+    public void info(String message, Object... args) {
         logger.info(message);
     }
 
@@ -22,7 +22,7 @@ public class LoggerAdapter implements LoggerOutputPort {
     }
 
     @Override
-    public void error(String message,  Object... args) {
+    public void error(String message, Object... args) {
         logger.error(message);
     }
 }

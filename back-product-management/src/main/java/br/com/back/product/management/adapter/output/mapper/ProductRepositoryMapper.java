@@ -9,15 +9,15 @@ public class ProductRepositoryMapper {
 
     public ProductEntity toEntity(Product product) {
         return new ProductEntity(
-            product.getSKU(),
-            product.getNome(),
-            product.getDescription(),
-            product.getCategoria(),
-            product.getBrand(),
-            product.getBarCode(),
-            product.getCostPrice(),
-            product.getSellPrice(),
-            product.getMeasurementUnit()
+                product.getSKU(),
+                product.getNome(),
+                product.getDescription(),
+                product.getCategoria(),
+                product.getBrand(),
+                product.getBarCode(),
+                product.getCostPrice(),
+                product.getSellPrice(),
+                product.getMeasurementUnit()
         );
     }
 
