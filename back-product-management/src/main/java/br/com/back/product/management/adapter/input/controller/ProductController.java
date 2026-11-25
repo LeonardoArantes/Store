@@ -5,6 +5,7 @@ import br.com.back.product.management.adapter.input.controller.dto.response.Prod
 import br.com.back.product.management.adapter.input.controller.mapper.ProductMapper;
 import br.com.back.product.management.port.input.ProductManagementInputPort;
 import br.com.back.product.management.port.output.LoggerOutputPort;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,7 +29,7 @@ public class ProductController {
 
     @PostMapping
     @RequestMapping("/create")
-    public ResponseEntity<ProductResponse> createProduct(@RequestBody ProductRequest request) {
+    public ResponseEntity<ProductResponse> createProduct(@RequestBody  @Valid ProductRequest request) {
         logger.info("Received request to create product");
         productManagementInputPort.createProduct(productMapper.toDomain(request));
         ProductResponse response = new ProductResponse("0001", "Product Created");
