@@ -79,18 +79,18 @@ product-management/
 
 The current product model contains:
 
-| Attribute | Type |
-|---|---|
-| id | Long |
-| sku | String |
-| nome | String |
-| description | String |
-| category | String |
-| brand | String |
-| barCode | String |
+| Attribute | Type       |
+|---|------------|
+| id | Long       |
+| sku | String     |
+| nome | String     |
+| description | String     |
+| category | String     |
+| brand | String     |
+| barCode | String     |
 | costPrice | BigDecimal |
 | sellPrice | BigDecimal |
-| measurementUnit | String |
+| weight | BigDecimal |
 
 Category and brand are stored as simple string attributes. No entity relationships are implemented at this stage.
 
@@ -114,7 +114,7 @@ Category and brand are stored as simple string attributes. No entity relationshi
   "barCode": "7891234567890",
   "costPrice": 100.50,
   "sellPrice": 149.90,
-  "measurementUnit": "UN"
+  "weight": 1.000
 }
 ```
 
