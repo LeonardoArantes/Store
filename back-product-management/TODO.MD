@@ -2,13 +2,13 @@
 
 ## 1. Exception Handling and Validation
 
-- [ ] Implement `GlobalExceptionHandler` using `@RestControllerAdvice`.
-- [ ] Create custom exceptions.
-- [ ] Implement request validations using Jakarta Bean Validation (`@Valid`, `@NotBlank`, `@NotNull`, `@Positive`, etc.).
-- [ ] Validate required fields.
-- [ ] Validate prices (cost and selling price).
+- [X] Implement `GlobalExceptionHandler` using `@RestControllerAdvice`.
+- [X] Create custom exceptions.
+- [X] Implement request validations using Jakarta Bean Validation (`@Valid`, `@NotBlank`, `@NotNull`, `@Positive`, etc.).
+- [X] Validate required fields.
+- [X] Validate prices (cost and selling price).
 - [ ] Handle duplicate SKU exceptions.
-- [ ] Standardize API error responses.
+- [X] Standardize API error responses.
 
 ## 2. Automated Tests
 

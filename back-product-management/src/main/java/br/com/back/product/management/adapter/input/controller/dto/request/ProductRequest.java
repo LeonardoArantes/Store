@@ -1,5 +1,6 @@
 package br.com.back.product.management.adapter.input.controller.dto.request;
 
+import br.com.back.product.management.adapter.input.validation.ValidPrices;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,6 +9,7 @@ import jakarta.validation.constraints.Size;
 
 import java.math.BigDecimal;
 
+@ValidPrices
 public record ProductRequest(
 
         @NotBlank(message = "{0010}")
