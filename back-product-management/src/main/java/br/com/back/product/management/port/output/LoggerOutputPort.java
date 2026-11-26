@@ -8,4 +8,5 @@ public interface LoggerOutputPort {
 
     void error(String message, Object... args);
 
+    void error(String message, Throwable throwable, Object... args);
 }

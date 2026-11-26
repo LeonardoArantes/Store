@@ -5,6 +5,7 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 public class PriceValidation implements ConstraintValidator<ValidPrices, ProductRequest> {
+
     @Override
     public void initialize(ValidPrices constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
@@ -18,7 +19,7 @@ public class PriceValidation implements ConstraintValidator<ValidPrices, Product
                 return true;
         }
 
-        boolean valid = product.costPrice().compareTo(product.sellPrice()) >= 0;
+        boolean valid = product.sellPrice().compareTo(product.costPrice()) >= 0;
 
         if(!valid) {
             context.disableDefaultConstraintViolation();
