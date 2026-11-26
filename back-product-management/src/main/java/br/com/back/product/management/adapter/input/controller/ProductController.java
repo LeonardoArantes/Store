@@ -6,6 +6,7 @@ import br.com.back.product.management.adapter.input.controller.mapper.ProductMap
 import br.com.back.product.management.port.input.ProductManagementInputPort;
 import br.com.back.product.management.port.output.LoggerOutputPort;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,6 +34,6 @@ public class ProductController {
         logger.info("Received request to create product");
         productManagementInputPort.createProduct(productMapper.toDomain(request));
         ProductResponse response = new ProductResponse("0001", "Product Created");
-        return ResponseEntity.ok(response);
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 }
