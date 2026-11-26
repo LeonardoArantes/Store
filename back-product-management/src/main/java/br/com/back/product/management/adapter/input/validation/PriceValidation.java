@@ -18,7 +18,7 @@ public class PriceValidation implements ConstraintValidator<ValidPrices, Product
                 return true;
         }
 
-        boolean valid = product.costPrice().compareTo(product.sellPrice()) >= 0;
+        boolean valid = product.sellPrice().compareTo(product.sellPrice()) >= 0;
 
         if(!valid) {
             context.disableDefaultConstraintViolation();

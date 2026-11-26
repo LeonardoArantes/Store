@@ -2,6 +2,7 @@ package br.com.back.product.management.adapter.input.exception;
 
 import br.com.back.product.management.adapter.input.controller.dto.response.errorResponse.ErrorResponse;
 import br.com.back.product.management.adapter.input.controller.dto.response.errorResponse.Errors;
+import br.com.back.product.management.core.exception.DuplicateSkuException;
 import br.com.back.product.management.port.output.LoggerOutputPort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,5 +36,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(new ErrorResponse(erros));
+    }
+
+    @ExceptionHandler(DuplicateSkuException.class)
+    public ResponseEntity<Errors> handleDuplicateSkuException(DuplicateSkuException exception) {
+        return ResponseEntity
+                .status(HttpStatus.CONFLICT)
+                .body(new Errors("sku", "SKU already exists."));
     }
 }

@@ -1,9 +1,11 @@
 package br.com.back.product.management.adapter.output.repository;
 
 import br.com.back.product.management.adapter.output.mapper.ProductRepositoryMapper;
+import br.com.back.product.management.core.exception.DuplicateSkuException;
 import br.com.back.product.management.core.model.Product;
 import br.com.back.product.management.port.output.LoggerOutputPort;
 import br.com.back.product.management.port.output.ProductRepositoryOutputPort;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -22,11 +24,13 @@ public class ProductAdapter implements ProductRepositoryOutputPort {
     @Override
     public void save(Product product) {
         try {
-            logger.info(String.format("Saving product on DB{}", product.getNome()));
+            logger.info("Saving product: {} on DB", product.getNome());
             var entity = mapper.toEntity(product);
             productRepository.save(entity);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (DataIntegrityViolationException e) {
+            logger.error("SKU [{}] already exists.", product.getSKU(),
+                    e.getMessage());
+            throw new DuplicateSkuException(product.getSKU());
         }
     }
 }
