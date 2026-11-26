@@ -1,6 +1,5 @@
 package br.com.back.product.management.core.usecase;
 
-import br.com.back.product.management.adapter.input.controller.dto.response.ProductResponse;
 import br.com.back.product.management.core.model.Product;
 import br.com.back.product.management.port.input.ProductManagementInputPort;
 import br.com.back.product.management.port.output.LoggerOutputPort;
@@ -16,11 +15,9 @@ public class ProductManagementUsecase implements ProductManagementInputPort {
         this.logger = logger;
     }
 
-
     @Override
-    public ProductResponse createProduct(Product product) {
+    public void createProduct(Product product) {
         logger.info(String.format("Creating product %s", product.getNome()));
         repository.save(product);
-        return null;
     }
 }
