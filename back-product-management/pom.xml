@@ -101,6 +101,7 @@
 						<exclude>**/mapper/**</exclude>
 						<exclude>**/model/**</exclude>
 						<exclude>**/port/**</exclude>
+						<exclude>**/logger/**</exclude>
 					</excludes>
 				</configuration>
 				<executions>

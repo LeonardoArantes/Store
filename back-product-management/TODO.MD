@@ -7,14 +7,14 @@
 - [X] Implement request validations using Jakarta Bean Validation (`@Valid`, `@NotBlank`, `@NotNull`, `@Positive`, etc.).
 - [X] Validate required fields.
 - [X] Validate prices (cost and selling price).
-- [ ] Handle duplicate SKU exceptions.
+- [X] Handle duplicate SKU exceptions.
 - [X] Standardize API error responses.
 
 ## 2. Automated Tests
 
-- [ ] Create Use Case unit tests.
-- [ ] Create Controller tests.
-- [ ] Create Repository tests.
+- [X] Create Use Case unit tests.
+- [X] Create Controller tests.
+- [X] Create Repository tests.
 - [ ] Create PostgreSQL integration tests.
 
 ## 3. Product Operations
