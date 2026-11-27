@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Tag(name = "Products", description = "Operações de gerenciamento de produtos")
-@RequestMapping("/products")
+@Tag(name = "Product", description = "Operações de gerenciamento de produtos")
+@RequestMapping("/product")
 public interface ProductSwagger {
 
     @Operation(summary = "Cria um produto", description = "Cadastra um novo produto pelo SKU")
