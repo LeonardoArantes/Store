@@ -21,7 +21,6 @@
 
 - [ ] Implement product update.
 - [ ] Implement product deactivation (soft delete).
-- [ ] Implement product search by ID.
 - [ ] Implement product search by SKU.
 - [ ] Implement product listing.
 
@@ -33,8 +32,8 @@
 
 ## 5. Documentation and Configuration
 
-- [ ] Create `.env.example`.
-- [ ] Implement Swagger/OpenAPI.
+- [X] Create `.env.example`.
+- [X] Implement Swagger/OpenAPI.
 - [ ] Document environment setup.
 - [ ] Document API endpoints.
 
