@@ -17,7 +17,7 @@ public class ProductManagementUsecase implements ProductManagementInputPort {
 
     @Override
     public void createProduct(Product product) {
-        logger.info(String.format("Creating product %s", product.getNome()));
+        logger.info(String.format("Creating product %s", product.getName()));
         repository.save(product);
     }
 }

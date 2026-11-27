@@ -10,7 +10,7 @@ public class ProductMapper {
     public Product toDomain(ProductRequest productRequest) {
         return new Product.Builder()
                 .SKU(productRequest.sku())
-                .nome(productRequest.nome())
+                .name(productRequest.name())
                 .description(productRequest.description())
                 .categoria(productRequest.category())
                 .brand(productRequest.brand())

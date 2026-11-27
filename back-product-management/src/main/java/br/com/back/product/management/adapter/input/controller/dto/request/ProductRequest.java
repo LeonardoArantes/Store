@@ -18,7 +18,7 @@ public record ProductRequest(
 
         @NotBlank(message = "{0011}")
         @Size( max = 150, message = "{0017}")
-        String nome,
+        String name,
 
         String description,
 

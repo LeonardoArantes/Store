@@ -21,7 +21,7 @@ public class ProductEntity {
     String sku;
 
     @Column(nullable = false, length = 150)
-    String nome;
+    String name;
 
     String description;
 
@@ -45,9 +45,9 @@ public class ProductEntity {
     public ProductEntity() {
     }
 
-    public ProductEntity(String sku, String nome, String description, String category, String brand, String barCode, BigDecimal costPrice, BigDecimal sellPrice, BigDecimal weight) {
+    public ProductEntity(String sku, String name, String description, String category, String brand, String barCode, BigDecimal costPrice, BigDecimal sellPrice, BigDecimal weight) {
         this.sku = sku;
-        this.nome = nome;
+        this.name = name;
         this.description = description;
         this.category = category;
         this.brand = brand;
@@ -73,12 +73,12 @@ public class ProductEntity {
         this.sku = sku;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

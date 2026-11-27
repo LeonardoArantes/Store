@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Product {
 
     private String SKU;
-    private String nome;
+    private String name;
     private String description;
     private String categoria;
     private String brand;
@@ -16,7 +16,7 @@ public class Product {
 
     public Product(Builder builder) {
         this.SKU = builder.SKU;
-        this.nome = builder.nome;
+        this.name = builder.name;
         this.description = builder.description;
         this.categoria = builder.categoria;
         this.brand = builder.brand;
@@ -34,12 +34,12 @@ public class Product {
         this.SKU = SKU;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -100,7 +100,7 @@ public class Product {
 
     public static class Builder {
         private String SKU;
-        private String nome;
+        private String name;
         private String description;
         private String categoria;
         private String brand;
@@ -117,8 +117,8 @@ public class Product {
             return this;
         }
 
-        public Builder nome(String nome) {
-            this.nome = nome;
+        public Builder name(String name) {
+            this.name = name;
             return this;
         }
 

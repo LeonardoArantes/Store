@@ -1,21 +1,19 @@
 package br.com.back.product.management.adapter.input.controller;
 
+import br.com.back.product.management.adapter.input.controller.swagger.ProductSwagger;
 import br.com.back.product.management.adapter.input.controller.dto.request.ProductRequest;
 import br.com.back.product.management.adapter.input.controller.dto.response.ProductResponse;
 import br.com.back.product.management.adapter.input.controller.mapper.ProductMapper;
 import br.com.back.product.management.port.input.ProductManagementInputPort;
 import br.com.back.product.management.port.output.LoggerOutputPort;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/product")
-public class ProductController {
+public class ProductController implements ProductSwagger {
 
     private final ProductMapper productMapper;
     private final ProductManagementInputPort productManagementInputPort;
@@ -27,10 +25,8 @@ public class ProductController {
         this.logger = logger;
     }
 
-
-    @PostMapping
-    @RequestMapping("/create")
-    public ResponseEntity<ProductResponse> createProduct(@RequestBody  @Valid ProductRequest request) {
+    @Override
+    public ResponseEntity<ProductResponse> createProduct(ProductRequest request) {
         logger.info("Received request to create product");
         productManagementInputPort.createProduct(productMapper.toDomain(request));
         ProductResponse response = new ProductResponse("0001", "Product Created");

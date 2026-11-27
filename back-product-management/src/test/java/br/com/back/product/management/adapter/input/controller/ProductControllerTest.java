@@ -87,11 +87,11 @@ public class ProductControllerTest {
         @DisplayName("Should return Product name is required")
         void ShouldReturnProductNameIsRequired() throws Exception {
             var productRequest = validPaylaod();
-            productRequest.put("nome", "");
+            productRequest.put("name", "");
 
             postProduct(productRequest)
                     .andExpect(status().isBadRequest())
-                    .andExpect(jsonPath("$.errors[?(@.field == 'nome')].message")
+                    .andExpect(jsonPath("$.errors[?(@.field == 'name')].message")
                             .value("Product name is required."));
 
             then(productManagementInputPort).shouldHaveNoInteractions();
@@ -158,7 +158,7 @@ public class ProductControllerTest {
         void ShouldReturnproductMustNotExceedxChar() throws Exception {
             var productRequest = validPaylaod();
             productRequest.put("sku", EXCEED_LIMIT);
-            productRequest.put("nome", EXCEED_LIMIT);
+            productRequest.put("name", EXCEED_LIMIT);
             productRequest.put("category",EXCEED_LIMIT);
             productRequest.put("brand", EXCEED_LIMIT);
             productRequest.put("barCode", EXCEED_LIMIT);
@@ -173,7 +173,7 @@ public class ProductControllerTest {
                     .value("Brand must not exceed 100 characters"))
                 .andExpect(jsonPath("$.errors[?(@.field == 'barCode')].message")
                     .value("Barcode must not exceed 50 characters."))
-                .andExpect(jsonPath("$.errors[?(@.field == 'nome')].message")
+                .andExpect(jsonPath("$.errors[?(@.field == 'name')].message")
                         .value("Product name must not exceed 150 characters."));
 
             then(productManagementInputPort).shouldHaveNoInteractions();

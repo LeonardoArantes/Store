@@ -15,7 +15,7 @@ public class ProductFactory {
     public static Map<String, Object> validPaylaod() {
         var payload = new HashMap<String, Object>();
         payload.put("sku", "SKU-001");
-        payload.put("nome", "Notebook");
+        payload.put("name", "Notebook");
         payload.put("description", "Notebook gamer");
         payload.put("category", "Eletrônicos");
         payload.put("brand", "Acme");
