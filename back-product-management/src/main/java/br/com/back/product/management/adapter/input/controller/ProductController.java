@@ -1,6 +1,6 @@
 package br.com.back.product.management.adapter.input.controller;
 
-import br.com.back.product.management.adapter.input.controller.Swagger.ProductSwagger;
+import br.com.back.product.management.adapter.input.controller.swagger.ProductSwagger;
 import br.com.back.product.management.adapter.input.controller.dto.request.ProductRequest;
 import br.com.back.product.management.adapter.input.controller.dto.response.ProductResponse;
 import br.com.back.product.management.adapter.input.controller.mapper.ProductMapper;

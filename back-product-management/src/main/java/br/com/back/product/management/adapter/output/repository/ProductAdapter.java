@@ -24,7 +24,7 @@ public class ProductAdapter implements ProductRepositoryOutputPort {
     @Override
     public void save(Product product) {
         try {
-            logger.info("Saving product: {} on DB", product.getNome());
+            logger.info("Saving product: {} on DB", product.getName());
             var entity = mapper.toEntity(product);
             productRepository.save(entity);
         } catch (DataIntegrityViolationException e) {

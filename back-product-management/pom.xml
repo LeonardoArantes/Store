@@ -110,6 +110,7 @@
 						<exclude>**/model/**</exclude>
 						<exclude>**/port/**</exclude>
 						<exclude>**/logger/**</exclude>
+						<exclude>**/swagger/**</exclude>
 					</excludes>
 				</configuration>
 				<executions>

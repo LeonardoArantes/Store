@@ -1,4 +1,4 @@
-package br.com.back.product.management.adapter.input.controller.Swagger;
+package br.com.back.product.management.adapter.input.controller.swagger;
 
 public final class ProductExamples {
 
@@ -8,7 +8,7 @@ public final class ProductExamples {
     public static final String CREATE_REQUEST = """
         {
           "sku": "925192",
-          "nome": "air intake",
+          "name": "air intake",
           "description": "AFE brand air intake with a SATin finish, fitting a 5.4L engine, with internal stock number 1283, stored in section E",
           "category": "Automotive parts",
           "brand": "aFe",
@@ -34,7 +34,7 @@ public final class ProductExamples {
                      "message": "SKU is required."
                  },
                  {
-                     "field": "nome",
+                     "field": "name",
                      "message": "Product name is required."
                  },
                  {

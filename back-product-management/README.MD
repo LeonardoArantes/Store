@@ -79,18 +79,18 @@ product-management/
 
 The current product model contains:
 
-| Attribute | Type       |
-|---|------------|
-| id | Long       |
-| sku | String     |
-| nome | String     |
+| Attribute   | Type       |
+|-------------|------------|
+| id          | Long       |
+| sku         | String     |
+| name        | String     |
 | description | String     |
-| category | String     |
-| brand | String     |
-| barCode | String     |
-| costPrice | BigDecimal |
-| sellPrice | BigDecimal |
-| weight | BigDecimal |
+| category    | String     |
+| brand       | String     |
+| barCode     | String     |
+| costPrice   | BigDecimal |
+| sellPrice   | BigDecimal |
+| weight      | BigDecimal |
 
 Category and brand are stored as simple string attributes. No entity relationships are implemented at this stage.
 
@@ -107,7 +107,7 @@ Category and brand are stored as simple string attributes. No entity relationshi
 ```json
 {
   "sku": "SKU-001",
-  "nome": "Produto exemplo",
+  "name": "Produto exemplo",
   "description": "Descrição do produto",
   "category": "Eletrônicos",
   "brand": "Samsung",
